@@ -1,3 +1,3 @@
 # batch_create_test
-•¶š‰»‚¯Šm”F
+æ–‡å­—åŒ–ã‘ç¢ºèª
 mojibake kakunin
