@@ -134,3 +134,41 @@ hhh g
 REM ポイント
 REM 区切り文字をスペースやタブ以外にも使う（空白も区切り文字に含める）場合、
 REM delimsはオプションの最後に、スペースはさらにその最後（"の手前）に。スペースとタブ両方使う場合は、タブを先に書く。
+
+
+
+REM 7/11(木)
+
+トークンオプション〜 eol,skip 〜
+
+for /l "tokens=1,3 eol=a" %%i in (○○.txt) do echo %%i %%j
+
+実行結果
+1 3
+hhh ee:e
+
+for /l "tokens=1,3 skip=2" in (○○.txt) do echo %%i %%j
+
+実行結果
+a:i:u:e:o
+hhh ee:e
+
+
+REM ポイント
+REM eolで指定した文字から始まる行を無視、skipで指定した行数分先頭から無視
+
+
+
+トークンオプション〜 usebackq 〜
+
+for /f "usebackq tokens=1 delims==" %%i in (`set`) do echo %%i
+
+REM usebackqを使用すると、コマンドプロンプト上で使用できるMSDOSコマンドの出力を対象とすることができる。
+
+@echo off
+mode con lines=40 cols=25
+set
+pause >nul
+cls
+for /f "usebackq tokens=1 delims==" %%i in (`set`) do echo %%i
+pause >nul
